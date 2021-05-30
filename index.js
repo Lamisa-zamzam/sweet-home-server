@@ -23,8 +23,36 @@ client.connect((err) => {
     console.log("db connected");
 
     app.post("/addHouse", (req, res) => {
-        const { detail, price, houseName, imageURL } = req.body;
-        const house = { detail, price, houseName, imageURL };
+        const {
+            description,
+            price,
+            title,
+            img,
+            address,
+            shortDesc,
+            serviceCharge,
+            securityDeposit,
+            flatSize,
+            floor,
+            roomCategory,
+            facilities,
+            addFacilities,
+        } = req.body;
+        const house = {
+            description,
+            price,
+            title,
+            address,
+            shortDesc,
+            serviceCharge,
+            securityDeposit,
+            flatSize,
+            floor,
+            roomCategory,
+            facilities,
+            addFacilities,
+        };
+        console.log(house);
         houseCollection.insertOne(house).then((result) => {
             res.send(result.insertedCount > 0);
         });
