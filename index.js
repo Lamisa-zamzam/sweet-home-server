@@ -52,7 +52,6 @@ client.connect((err) => {
             facilities,
             addFacilities,
         };
-        console.log(house);
         houseCollection.insertOne(house).then((result) => {
             res.send(result.insertedCount > 0);
         });
