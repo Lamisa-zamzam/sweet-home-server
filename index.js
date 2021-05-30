@@ -114,6 +114,7 @@ client.connect((err) => {
 
     app.post("/placeOrder", (req, res) => {
         const orderDetail = req.body;
+        console.log(orderDetail);
         orderCollection.insertOne(orderDetail).then((result) => {
             res.send(result.insertedCount > 0);
         });
