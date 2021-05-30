@@ -48,6 +48,7 @@ client.connect((err) => {
             securityDeposit,
             flatSize,
             floor,
+            img,
             roomCategory,
             facilities,
             addFacilities,
