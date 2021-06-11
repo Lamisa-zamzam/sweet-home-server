@@ -25,7 +25,7 @@ My project includes:
 
 
 ### Roadmap
-=> considring adding mongoose
+=> considering adding mongoose
 
 ### Contributing
 Pull requsts are welcome. For major changes, please open a issue first and discuss what you would like to change. 
